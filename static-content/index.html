@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta HTTP-EQUIV="EXPIRES" CONTENT="-1">
+		<script src="lib/jquery-3.7.1.min.js"></script>
+
+		<script language="javascript" src="controller.js" > </script>
+
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+		<link rel="stylesheet" href="style.css" type="text/css"> 
+
+		<title>309dle</title>
+	</head>
+	<body>
+		<header>
+			<nav id="ui_nav">
+				<span class="alignleft"></span>
+				<span class="aligncenter">
+					<a name="ui_home" style="font-size:x-large; text-decoration:underline;" onclick="showUI('#ui_home');">309DLE</a>
+				</span>
+				<span class="alignright">
+					<a name="ui_username" onclick="showUI('#ui_username');"><span class="material-symbols-outlined"> person </span></a>
+					<a name="ui_play" onclick="showUI('#ui_play');"><span class="material-symbols-outlined"> play_circle </span></a>
+					<a name="ui_stats" onclick="showUI('#ui_stats');"><span class="material-symbols-outlined"> leaderboard </span></a>
+					<a name="ui_instructions" onclick="showUI('#ui_instructions');"><span class="material-symbols-outlined"> help </span></a>
+				</span>
+			</nav>
+		</header>
+		<div class="ui_top" id="ui_home">
+			<div class="textblock"> 
+				Solo
+				<br/>
+				Play the classic game against yourself. 
+			</div>
+		</div>
+		<div class="ui_top" id="ui_username">
+			<h2>username: <span id="username"></span></h2>
+		</div>
+		<div class="ui_top" id="ui_play">
+			<center>
+				<table class="letterbox">
+					<tr class="row0" > <td class="col0">&nbsp;</td> <td class="col1">&nbsp;</td> <td class="col2">&nbsp;</td> <td class="col3">&nbsp;</td> <td class="col4">&nbsp;</td> </td> </tr>
+					<tr class="row1" > <td class="col0">&nbsp;</td> <td class="col1">&nbsp;</td> <td class="col2">&nbsp;</td> <td class="col3">&nbsp;</td> <td class="col4">&nbsp;</td> </td> </tr>
+					<tr class="row2" > <td class="col0">&nbsp;</td> <td class="col1">&nbsp;</td> <td class="col2">&nbsp;</td> <td class="col3">&nbsp;</td> <td class="col4">&nbsp;</td> </td> </tr>
+					<tr class="row3" > <td class="col0">&nbsp;</td> <td class="col1">&nbsp;</td> <td class="col2">&nbsp;</td> <td class="col3">&nbsp;</td> <td class="col4">&nbsp;</td> </td> </tr>
+					<tr class="row4" > <td class="col0">&nbsp;</td> <td class="col1">&nbsp;</td> <td class="col2">&nbsp;</td> <td class="col3">&nbsp;</td> <td class="col4">&nbsp;</td> </td> </tr>
+					<tr class="row5" > <td class="col0">&nbsp;</td> <td class="col1">&nbsp;</td> <td class="col2">&nbsp;</td> <td class="col3">&nbsp;</td> <td class="col4">&nbsp;</td> </td> </tr>
+				</table>
+			</center>
+			<br/>
+			<br/>
+			<center>
+				<table class="keyboardrow">
+					<tr>
+						<td class="Q">Q</td>
+						<td class="W">W</td>
+						<td class="E">E</td>
+						<td class="R">R</td>
+						<td class="T">T</td>
+						<td class="Y">Y</td>
+						<td class="U">U</td>
+						<td class="I">I</td>
+						<td class="O">O</td>
+						<td class="P">P</td>
+					</tr>
+				</table>
+				<table class="keyboardrow">
+					<tr>
+						<td class="A">A</td>
+						<td class="S">S</td>
+						<td class="D">D</td>
+						<td class="F">F</td>
+						<td class="G">G</td>
+						<td class="H">H</td>
+						<td class="J">J</td>
+						<td class="K">K</td>
+						<td class="L">L</td>
+					</tr>
+				</table>
+				<table class="keyboardrow">
+					<tr>
+						<td class="DEL">DEL</td>
+						<td class="Z">Z</td>
+						<td class="X">X</td>
+						<td class="C">C</td>
+						<td class="V">V</td>
+						<td class="B">B</td>
+						<td class="N">N</td>
+						<td class="M">M</td>
+						<td class="ENTER">ENTER</td>
+					</tr>
+				</table>
+			</center>
+			<br/>
+			<br/>
+			<center>
+				<button id="play_newgame_button" style="background:red;" onclick="gui_newgame();">NEW GAME</button>
+			</center>
+		</div>
+		<div class="ui_top" id="ui_stats">
+			<center style="font-size:xx-large;">
+				<span class="material-symbols-outlined"> check_circle </span> <a class="won"> 0</a> &nbsp;
+				<span class="material-symbols-outlined"> cancel </span> <a class="lost"> 0</a>
+			</center>
+		</div>
+		<div class="ui_top" id="ui_instructions">
+			<div class="textblock"> 
+				<h2>Letter indication examples</h2>
+				<table class="letterbox_demo">
+					<p>The letter E is in the correct position.</p>
+					<tr> <td>H</td> <td style="background-color: rgba(94, 255, 94, 0.6);">E</td> <td >L</td> <td>L</td> <td>O</td> </td> </tr>
+				</table>
+				<table class="letterbox_demo">
+					<p>The letter A is in an incorrect position.</p>
+					<tr> <td style="background-color: rgba(253, 183, 49, 0.6);">A</td> <td >B</td> <td>O</td> <td>U</td> <td>T</td> </td> </tr>
+				</table>
+				<table class="letterbox_demo">
+					<p>The letter C and E are not in the word.</p>
+					<tr > <td>S</td> <td>A</td> <td>U</td> <td style="background-color: rgba(75, 75, 75, 0.6);">C</td> <td style="background-color: rgba(75, 75, 75, 0.6);">E</td> </td> </tr>
+				</table>
+			</div>
+		</div>
+		<div class="error" id="error"> This is an error message.</div>
+	</body>
+</html>

@@ -1,0 +1,9 @@
+<a name="ui_username" onclick="showUI('#ui_username');"><span class="material-symbols-outlined"> person </span></a>
+<a name="ui_play" onclick="gui_play();"><span class="material-symbols-outlined"> play_circle </span></a>
+<a name="ui_stats" onclick="showUI('#ui_stats');"><span class="material-symbols-outlined"> leaderboard </span></a>
+<a name="ui_instructions" onclick="showUI('#ui_instructions');"><span class="material-symbols-outlined"> help </span></a>
+<span class="material-symbols-outlined"> schedule </span><span id="play_timer" style="font-size:x-large;">0:00</span>
+<span class="material-symbols-outlined"> check_circle </span> 8 &nbsp;
+<span class="material-symbols-outlined"> help </span> 1 &nbsp;
+<span class="material-symbols-outlined"> cancel </span> 2
+

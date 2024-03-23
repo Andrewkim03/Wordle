@@ -1,0 +1,69 @@
+#ui_home {
+	display: block;
+}
+#ui_username, #ui_play, #ui_stats, #ui_instructions {
+	display: none;
+}
+body { 
+	font-family: 'Roboto', sans-serif;
+	position: relative; margin: 10px; padding: 0; background:#000; color:#fff; 
+}
+
+header { font-weight: bold; border-bottom:1px solid grey; padding-top:5ex; padding-bottom:1ex; }
+
+nav {
+	display: flex;
+	width: 100%;
+}
+
+.alignleft { width:33.33333%; text-align:left; }
+.aligncenter { width:33.33333%; text-align:center; }
+.alignright { width:33.33333%; text-align:right; }
+
+/* nav a { } */
+
+nav a span:hover { transform: scale(1.1); }
+
+.textblock {
+	border:1px solid white; 
+	width:50%; 
+	padding:1ex;
+	margin: 1ex auto 1ex auto;
+}
+
+.letterbox td, .letterbox_demo td {
+	text-align: center;
+	border:1px solid grey;
+	width:3ex;
+	height:3ex;
+}
+
+
+.keyboardrow td {
+	text-align: center;
+	border:1px solid grey;
+	width:3ex;
+	height:3ex;
+}
+
+
+.ui_top h2 {
+	text-align: center;
+}
+
+.nav_selected {
+	color: #6f6;
+	background: #000;
+}
+
+.error {
+	display: none;
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	padding: 10px 20px;
+	background-color: rgba(255,0,0, 0.7);
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	border: 1px solid white;
+}
